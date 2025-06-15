@@ -1,0 +1,225 @@
+.navbarbox {
+display: flex;
+justify-content: space-around;
+align-items: center;
+align-content: center;
+width: 100%; /* Ensure the container takes up the full width */
+}
+.navbarcontent {
+
+}
+.navbarcontent p {
+    display: inline-block;
+    padding: 10px 10px;
+    max-width: 100%;
+    background-color: #e5ebed;
+    text-align: center;
+}
+.main {
+background-image: url(https://static.wixstatic.com/media/1a7d2a_bcca668871d748c0b4b88f6a1159dafd~mv2.png);
+height: 300px;
+overflow: hidden;
+background-size: cover;
+background-position: left;
+}
+.maincontent {
+text-align: center;
+padding-top: 20px;
+color: white;
+text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
+}
+.pods {
+    min-height: 500px;
+    margin: auto;
+    padding-top: 20px;
+}
+.podcontent {
+    display: flex;
+    justify-content: center;
+}
+.pod {
+    align-items: center;
+    padding: 10px;
+    object-position: center;
+    width: 100%;
+}
+@media only screen and (max-width: 768px) {
+    .podcontent {
+        flex-direction: column; /* Stack content on smaller screens */
+        height: auto; /* Allow content to adjust height */
+        padding: 20px; /* Add padding for mobile */
+    }
+    .icons {
+        grid-template-columns: 1fr; /* Stack icons in one column */
+        padding: 0 5px; /* Add padding to prevent overflow */
+    }
+    .pod {
+    width: 100%;
+    padding: 10px; /* Ensure padding doesn't cause overflow */
+    margin-bottom: 10px; /* Add some space between pods */
+    }
+    .navbarcontent p {
+        padding: 10px; /* Ensure padding is consistent */
+        width: auto; /* Let the width adjust as needed */
+        margin: 0 5px; /* Small margin for better spacing */
+    }
+    * {
+        box-sizing: border-box; /* Include padding and border in width/height */
+    }
+/* Button styles */
+.check-availability-btn {
+    background-color: #ffb730; /* Gold background color */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 12px 20px; /* Add padding around the text */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    display: inline; /* Allow button to be inline with other elements */
+    font-size: 16px; /* Set text size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change the cursor to a pointer when hovering */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    margin-left: 10px; /* Space to the left of the button */
+}
+
+/* Button Hover Effect */
+.check-availability-btn:hover {
+    background-color: #e59b0e; /* Darker gold when hovered */
+}
+    .icons {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+
+    .icon {
+    
+    }
+
+    .icon img {
+        width: 35px; /* Slightly smaller icon on mobile */
+    }
+}
+@media only screen and (max-width: 600px) {
+    .icons {
+        grid-template-columns: 1fr; /* 1 column on very small screens */
+        padding: 0 5px; /* Slight padding for spacing */
+    }
+    /* Button styles */
+.check-availability-btn {
+    background-color: #ffb730; /* Gold background color */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 12px 20px; /* Add padding around the text */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    display: inline; /* Allow button to be inline with other elements */
+    font-size: 16px; /* Set text size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change the cursor to a pointer when hovering */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    margin-left: 10px; /* Space to the left of the button */
+}
+
+/* Button Hover Effect */
+.check-availability-btn:hover {
+    background-color: #e59b0e; /* Darker gold when hovered */
+}
+    .pod img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the image covers the space without distortion */
+        border-radius: 4px; /* Rounded corners for the image */
+    }
+    .icon {
+        justify-content: center; /* Center content on very small screens */
+    }
+
+    .icon img {
+        width: 30px; /* Smaller icon for very small screens */
+    }
+
+    .pod {
+        padding: 10px; /* Add padding for small screens */
+    }
+}
+.pod img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.3s ease-in-out;
+}
+.pod:hover img {
+  transform: scale(1.05);
+}
+.card {
+    border-style: solid;
+    border-color: #e5ebed;
+    border-radius: 4px;
+    width: 100%;
+}
+.card h4 {
+    padding-left: 10px;
+}
+.card p {
+    padding: 10px;
+}
+body {
+    font-family: 'Josefin Sans', 'Open Sans', sans-serif;
+    color: #324158;
+}
+.icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+.icon {
+    display: flex;
+    align-items: center;  /* Vertically center the text and icon */
+}
+.icon img {
+    height: auto;
+    width: 18px;
+    margin-right: 10px;
+}
+.icon p {
+    font-size: 12px;
+    text-align: left;
+}
+.check-availability-btn {
+    background-color: #ffb730; /* Gold background color */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    padding: 12px 20px; /* Add padding around the text */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    display: inline; /* Allow button to be inline with other elements */
+    font-size: 16px; /* Set text size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change the cursor to a pointer when hovering */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    margin-left: 10px;
+  }
+  
+  .check-availability-btn:hover {
+    background-color: #42624400; /* trans when hovering */
+    color: #324158;
+    border-style: solid;
+    border-color: #324158;
+  }
+  
+  .check-availability-btn:active {
+    background-color: #3e8e4100; /* trans when the button is clicked */
+  }  
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    padding: 5px;
+}
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
+    text-align: center;
+}
