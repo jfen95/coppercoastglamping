@@ -1,19 +1,53 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
+}
 .navbarbox {
-display: flex;
-justify-content: space-around;
-align-items: center;
-align-content: center;
-width: 100%; /* Ensure the container takes up the full width */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.check-availability-btn {
+    border-radius: 8px;
+    font-weight: bold;
+}
+.nav {
+    background-color: #e5ebed;
 }
 .navbarcontent {
-
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 100%;
 }
-.navbarcontent p {
-    display: inline-block;
-    padding: 10px 10px;
-    max-width: 100%;
+.navbarcontent a {
+    padding: 12px 20px;
     background-color: #e5ebed;
     text-align: center;
+    text-decoration: none;
+    color: #646464;
+    border-right: 1px solid #d1d1d1;
+    border-radius: 5px 5px 0 0;
+}
+.navbarcontent a.active {
+  background-color: #87aeb0; /* Example highlight color */
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+}
+.navbarcontent a:hover,
+.navbarcontent a:focus {
+  color: #c46c2f;           /* Copper accent color on hover/focus */
+  outline: none;            /* Remove default focus outline */
+  text-decoration: underline;  /* Add underline on hover for clarity */
 }
 .main {
 background-image: url(https://static.wixstatic.com/media/1a7d2a_bcca668871d748c0b4b88f6a1159dafd~mv2.png);
@@ -36,12 +70,15 @@ text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
 .podcontent {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
 }
 .pod {
-    align-items: center;
+    flex: 0 1 48%;
     padding: 10px;
-    object-position: center;
-    width: 100%;
+    box-sizing: border-box;
 }
 @media only screen and (max-width: 768px) {
     .podcontent {
@@ -79,7 +116,6 @@ text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Change the cursor to a pointer when hovering */
     transition: background-color 0.3s ease; /* Smooth transition for background color */
-    margin-left: 10px; /* Space to the left of the button */
 }
 
 /* Button Hover Effect */
@@ -97,6 +133,27 @@ text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
     .icon img {
         width: 35px; /* Slightly smaller icon on mobile */
     }
+      .navbarbox {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .navbarcontent {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  .navbarcontent a {
+    width: 100%;
+    padding: 12px 15px;
+    border-right: none;
+    border-radius: 5px;
+  }
+  .check-availability-btn {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
 }
 @media only screen and (max-width: 600px) {
     .icons {
@@ -116,7 +173,6 @@ text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Change the cursor to a pointer when hovering */
     transition: background-color 0.3s ease; /* Smooth transition for background color */
-    margin-left: 10px; /* Space to the left of the button */
 }
 
 /* Button Hover Effect */
@@ -200,7 +256,6 @@ body {
     border-radius: 5px; /* Rounded corners */
     cursor: pointer; /* Change the cursor to a pointer when hovering */
     transition: background-color 0.3s ease; /* Smooth transition for background color */
-    margin-left: 10px;
   }
   
   .check-availability-btn:hover {
@@ -222,4 +277,174 @@ h2 {
     font-family: 'Open Sans', sans-serif;
     padding: 10px;
     text-align: center;
+}
+/* ---------- Review Page Styles ---------- */
+.review-main {
+  background-color: #87aeb0;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+}
+.review-main h1 {
+    text-align: center;
+    color: #ffff;
+}
+.card-review {
+  width: 316px;
+  height: 543px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+.card-review > * {
+  position: relative;
+  z-index: 1; /* above overlay */
+}
+.review1{
+  background-image: url('https://static.wixstatic.com/media/1a7d2a_f5895879ed4f433f9e74edcf17ed3a5e~mv2.jpg/v1/fill/w_447,h_768,al_c,q_80,enc_avif,quality_auto/1a7d2a_f5895879ed4f433f9e74edcf17ed3a5e~mv2.jpg');
+}
+.review2{
+  background-image: url('https://static.wixstatic.com/media/1a7d2a_048ed0a36ac2485bbcb221aa58b1a272~mv2.jpg/v1/fill/w_434,h_768,al_c,q_80,enc_avif,quality_auto/1a7d2a_048ed0a36ac2485bbcb221aa58b1a272~mv2.jpg');
+}
+.review3{
+  background-image: url('https://static.wixstatic.com/media/1a7d2a_878e3733ffba423cbce9ce8ca91a69a4~mv2.jpg/v1/fill/w_434,h_768,al_c,q_80,enc_avif,quality_auto/1a7d2a_878e3733ffba423cbce9ce8ca91a69a4~mv2.jpg');
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(316px, 1fr));
+  gap: 2rem;
+  justify-items: center;     /* ✅ Horizontally center each card */
+  padding: 2rem 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.stars {
+  color: rgb(255, 183, 48);
+}
+.card-review blockquote p {
+  line-height: 1.6;
+  margin: 1rem 0;
+  padding: 0 1rem;
+}
+  .card-review::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(255, 255, 255, 0.85); /* white with 70% opacity */
+  border-radius: 6px; /* same border radius to match card */
+  z-index: 0; /* behind content */
+}
+@media only screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    justify-items: center;
+  }
+
+  .card-review {
+    width: 100%;
+    max-width: 320px; /* Keeps it readable */
+    height: auto;
+    margin: 0 auto;
+    padding: 1rem;
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    aspect-ratio: 316 / 543; /* maintain aspect ratio */
+    position: relative;
+  }
+  .card-review::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(255, 255, 255, 0.85); /* white with 70% opacity */
+  border-radius: 6px; /* same border radius to match card */
+  z-index: 0; /* behind content */
+}
+.card-review > * {
+  position: relative;
+  z-index: 1; /* above overlay */
+}
+  .review-main h1 {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+}
+h1 {
+  text-align: center;
+}
+/* ---------- Contct Page Styles ---------- */
+.header-section {
+  padding: 10px;
+}
+form {
+  max-width: 500px;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: system-ui, sans-serif;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+legend {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  color: #444;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.form-container {
+  display: flex;
+  justify-content: flex-start;
+  padding: 2rem;
 }
